@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.container {
+    position: relative;
+    background-color: #00ab9f;
+    height: 90vh;
+    width: 40vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    border: 2px solid #264844;
+    box-shadow: 0px 0px 70px rgb(62, 191, 191);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.city1 {
+    border: 1px solid #264844;
+    margin-top: 20px;
+    height: 7vh;
+    width: 80%;
+    background-color: #8ed1c8;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.img img {
+    display: block;
+    max-height: 180px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.temp {
+    text-align: center;
+    font-size: 3.5rem;
+    max-width: 100%;
+    border-radius: 10px;
+    color: rgb(255, 197, 120);
+    margin-top: 20px;
+}
+
+.humbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.humidity, .wind {
+    border: 1px solid #264844;
+    text-align: center;
+    background-color: #8ed1c8;
+    width: 45%;
+    font-size: 2rem;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.times {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.date, .time, .day {
+    border: 1px solid #264844;
+    text-align: center;
+    background-color: #8ed1c8;
+    width: 30%;
+    font-size: 2rem;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90vw;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .city, .img img, .temp, .humidity, .wind, .date, .time, .day {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    
+    .humbar, .times {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .humidity, .wind, .date, .time, .day {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .city, .img img, .temp, .humidity, .wind, .date, .time, .day {
+        font-size: 1.2rem;
+    }
+}
